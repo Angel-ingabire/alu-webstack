@@ -9,7 +9,7 @@ check_dns() {
     result=$(dig "$sub.$domain" +short | awk 'NR==1 {print $1}')
     
     if [[ -n "$result" ]]; then
-        echo "The subdomain $sub is an A record and points to $result"
+        echo "The subdomain $sub is  A record and points to $result"
     else
         echo "No A record found for $sub.$domain"
     fi
